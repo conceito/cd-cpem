@@ -1,0 +1,214 @@
+/* ************************************************
+   ********************PADRÃO**********************
+   ************************************************ */
+.body-default{
+    margin: 0 0 0 0;
+}
+
+frame{
+    scrolling :no;
+}
+h1{
+    font-family: "Arial", verdana, sans-serif;
+    font-size: 2em;
+    margin: 1em 0 1em 0;
+}
+
+h2{
+    font-family: "Arial", verdana, sans-serif;
+    font-size: 1.5em;
+    margin: 1em 0 1em 0;
+}
+
+.pages{
+    float: right;
+    margin-right: 110px;
+    font-family: verdana, sans-serif;
+}
+h3{
+    font-family: "Arial", verdana, sans-serif;
+    font-size: 1em;
+    margin: 1em 0 1em 0;
+}
+body{
+    background-image: url('../../images/barra2.jpg');
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: right -144px;
+    margin: 0 0 0 0;
+}
+embed{
+    margin:  0;
+}
+.author{
+    margin-top: 5px;
+    font-family: "Arial", verdana, sans-serif;
+    font-size: 0.8em;
+    margin: 0 50px;
+}
+
+.img{
+    max-width: 100%;
+    height: auto;
+}
+
+.img-logo{
+    width: 65%;
+}
+
+a{
+    font-family: "Arial", verdana, sans-serif;
+    text-decoration: none;
+}
+
+.title{
+    text-align: center;
+}
+
+/* ************************************************
+   ********************MENU************************
+   ************************************************ */
+
+.nav-bar{
+    background-image: url('../../images/fundo-nav.jpg');
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+#headbar{
+background-image: url('../../images/barra1.jpg');
+background-repeat: no-repeat;
+background-position: right;
+background-size: contain;
+}
+
+.nav-bar a{
+    color: #ffffff;
+}
+
+.nav-bar a:hover{
+    color: #DDDDDD;
+}
+
+a{
+
+}
+
+a:hover{
+    color: #000000;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    padding: 5px 5px 5px 0;
+}
+
+.nav-bar li{
+    font-family: Arial, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 9pt;
+    padding: 10px 10px 10px 10px;
+}
+
+/* ************************************************
+   ********************INDEX***********************
+   ************************************************ */
+
+.sponsor-index {
+    position: relative;
+    left: 400px;
+    display: inline-block;
+}
+
+.img-sponsor {
+    padding-right: 75px;
+    position: relative;
+    top: 30px;
+}
+
+.rio-index{
+    display: block;
+    width: 100%;
+}
+
+.rio {
+    position: relative;
+    right: 91px;
+    float: right;
+    width: 89%;
+}
+
+
+.text-right{
+    text-align: right;
+}
+
+.logo {
+    float: left;
+    margin: 0 0 0 0;
+    width: 33%;
+}
+
+.logo-index p {
+    font-family: "Arial", verdana, sans-serif;
+    line-height: 1.5em;
+    margin: 5em 0 2em 2em;
+    display: inline-block;
+    font-size: 28px;
+}
+
+.logo-index {
+    margin-left: 7%;
+}
+
+.title-index{
+    font-family: "Arial", verdana, sans-serif;
+    color: #828080;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* ************************************************
+   ********************INTERNAS********************
+   ************************************************ */
+
+#copyright {
+    padding: 0 10em 0em 7em;
+}
+
+.author-index {
+    background-color: #002166;
+    text-align: center;
+    padding: 10px;
+    width: 80%;
+    margin-left: 80px;
+}
+.author-index a{
+    color: #ffffff;
+}
+.author-index a:hover{
+    font-size: 1.5em;
+}
+.author-name{
+    font-size: 1.2em;
+    font-weight: bold;
+ }
+
+.author-link{
+    font-size: 1.2em;
+}
+
+.formText{
+    font-family: "Arial", verdana, sans-serif;
+}
+
+.content-session{
+    margin-left: 10px;
+}
+
+.content-session a{
+    border-top: #eee solid 1px;
+    display: block;
+    margin-top: 10px;
+    padding-top: 10px;
+}}
