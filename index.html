@@ -4,6 +4,25 @@
 <head>
     <title>2014 CPEM</title>
     <link rel="stylesheet" href="data/assets/css/base-layout.css" type="text/css" />
+
+	<script type="text/javascript">
+		function clicked(){
+			setTimeout(removeFrameMargin, 10);
+		}
+
+		function removeFrameMargin()
+		{
+			var frame = GetDoc(document.getElementById('main'));
+			var body = frame.querySelector('body');
+			body.style.margin = 0;
+		}
+
+		function GetDoc(x) {
+			return x.contentDocument || x.contentWindow.document;
+		}
+
+	</script>
+
 </head>
 <frameset rows="115,*" frameborder="0" framespacing="0">
     <frame src="data/html/head.html" name="header" id="header" scrolling="no" frameborder="0" marginheight="0" marginwidth="0" noresize="noresize">
@@ -18,4 +37,6 @@
         </noframes>
         <!-- DO NOT ALTER THE TEXT BELOW THIS LINE!!! -->
     </frameset>
+
+
 </html>
