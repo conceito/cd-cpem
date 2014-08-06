@@ -145,10 +145,17 @@ a:hover{
     text-align: right;
 }
 
+.transition{
+    width: 100%;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+
 .logo {
     float: left;
     margin: 0 0 0 0;
-    width: 33%;
 }
 
 .logo-index p {
