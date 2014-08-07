@@ -1,0 +1,19 @@
+{
+    "name": "Conceito 11/planilha",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "conceito",
+            "email": "conceitocomunica@gmail.com"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"app\\": "app/"
+		}
+	},
+    "minimum-stability": "dev",
+    "require": {
+	    "phpoffice/phpexcel": "dev-master"
+    }
+}
