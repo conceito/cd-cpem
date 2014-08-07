@@ -257,7 +257,9 @@ a:hover{
 }
 
 
-
+.author .list-item a{
+    display: inline-block;
+}
 select{
     padding: 6px;
     width: 100%;
