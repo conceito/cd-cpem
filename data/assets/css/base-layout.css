@@ -355,7 +355,10 @@ a:hover{
 
 
 .author .list-item a{
-    display: inline-block;
+    display: block;
+}
+.author .list-item a:hover{
+    font-weight: bold;
 }
 select{
     padding: 6px;
