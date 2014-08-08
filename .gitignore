@@ -3,6 +3,8 @@ Thumbs.db
 ehthumbs.db
 
 .idea
+data/papers/*
+*.pdf
 
 # Folder config file
 Desktop.ini
@@ -40,4 +42,4 @@ Icon
 
 #Files
 #=========================
-data/papers/*
+
