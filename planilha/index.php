@@ -1,11 +1,18 @@
-<?php
+<?php header('Content-Type: text/html; charset=utf-8');
 require_once "vendor/autoload.php";
+
+if (!isset($_GET['app'])):
+	?>
+	<a href="?app=authors">Por autores</a> | <a href="?app=articles">Por artigo</a>
+<?php
+endif;
 ?>
 
-	<a href="?app=authors">Por autores</a>
-
-
 <?php
+/**
+ * ==================================================
+ * Authors
+ */
 if (isset($_GET['app']) && $_GET['app'] == 'authors'):
 
 	$authors = new \app\Authors("authors.xlsx");
@@ -15,9 +22,9 @@ if (isset($_GET['app']) && $_GET['app'] == 'authors'):
 
 	foreach ($authors->get() as $a):
 
-		if (! isset($a['full_name'])):
+		if (!isset($a['full_name'])):
 			?>
-			<h2><?php echo $a['letter']?></h2>
+			<h2 id="auth<?php echo $a['letter'] ?>"><?php echo $a['letter'] ?></h2>
 		<?php
 		else:
 			?>
@@ -45,17 +52,37 @@ if (isset($_GET['app']) && $_GET['app'] == 'authors'):
 
 endif;
 
+
+/**
+ * ==================================================
+ * Articles
+ */
 if (isset($_GET['app']) && $_GET['app'] == 'articles'):
 
 	$mySheet = new \app\Sheet("articles.xlsx");
 
-	?>
+	//	$authors = new \app\Authors("authors.xlsx");
 
-	<pre>
-		<?php print_r($mySheet->get()); ?>
-	</pre>
+	//	$authors->setArticles($mySheet->get());
 
-<?php
+	$i = 2;
+
+	foreach ($mySheet->get() as $s):
+		?>
+
+		<p><?php echo $s['title']?> @</p>
+		<p><?php echo $i?></p>
+		<p><?php echo $mySheet->getCompiledAuthors($s['authors'])?></p>
+		<p>+++</p>
+
+
+
+	<?php
+	$i = $i + 2;
+	endforeach;
 endif;
-
 ?>
+
+<!--<pre>-->
+<!--		--><?php ////print_r($mySheet->get()); ?>
+<!--	</pre>-->

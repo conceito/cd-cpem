@@ -21,7 +21,7 @@ class Sheet
 	 */
 	public function addRow($cellIterator)
 	{
-		$newRow = [];
+		$newRow    = [];
 		$newAuthor = [];
 
 		foreach ($cellIterator as $cell)
@@ -32,7 +32,7 @@ class Sheet
 
 			if ($this->getLetter($coord) === 'A')
 			{
-				$newRow['order'] = $value;
+				$newRow['order']  = $value;
 				$newRow['pdf_id'] = $this->getPdfName($value);
 			}
 			else if ($this->getLetter($coord) === 'B')
@@ -47,6 +47,19 @@ class Sheet
 			 * ======================================================
 			 * authors
 			 */
+			else if ($this->isFirstName($coord))
+			{
+				$newAuthor['first'] = (mb_strlen($value) < 2) ? null : $value;
+			}
+			else if ($this->isMiddleName($coord))
+			{
+				$newAuthor['middle'] = (mb_strlen($value) < 2) ? null : $value;
+			}
+			else if ($this->isLastName($coord))
+			{
+				$newAuthor['last']   = (mb_strlen($value) < 2) ? null : $value;
+				$newRow['authors'][] = $newAuthor;
+			}
 
 		}
 
@@ -92,10 +105,33 @@ class Sheet
 
 	public function getPdfName($order)
 	{
-		$n = '00' . $order;
+		$n   = '00' . $order;
 		$pdf = substr($n, -3);
 
 		return $pdf;
+	}
+
+
+	/**
+	 * concatenate authors name separated with comma
+	 *
+	 * @param array $authors
+	 * @return string
+	 */
+	public function getCompiledAuthors(array $authors)
+	{
+		$line = '';
+
+		foreach ($authors as $a)
+		{
+			if($a['first'] && $a['last'])
+			{
+				$line .= $a['first'].' '.$a['last'] . ', ';
+			}
+		}
+
+		return trim($line, ', ');
+
 	}
 
 
@@ -114,7 +150,7 @@ class Sheet
 				{
 					//				echo '    Row number - ', $row->getRowIndex(), PHP_EOL;
 
-					if($row->getRowIndex() > 1)
+					if ($row->getRowIndex() > 1)
 					{
 						$cellIterator = $row->getCellIterator();
 						$cellIterator->setIterateOnlyExistingCells(false); // Loop all cells, even if it is not set
@@ -122,7 +158,6 @@ class Sheet
 						$this->addRow($cellIterator);
 
 					}
-
 
 				}
 			}

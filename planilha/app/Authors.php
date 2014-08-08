@@ -84,21 +84,10 @@ class Authors
 				{
 					//					echo '    Row number - ', $row->getRowIndex(), PHP_EOL;
 
-					if ($row->getRowIndex() > 1)
-					{
 						$cellIterator = $row->getCellIterator();
 						$cellIterator->setIterateOnlyExistingCells(false); // Loop all cells, even if it is not set
 
 						$this->addRow($cellIterator);
-
-						//						foreach ($cellIterator as $cell)
-						//						{
-						//							if (!is_null($cell))
-						//							{
-						//								echo '        Cell - ', $cell->getCoordinate(), ' - ', $cell->getCalculatedValue(), PHP_EOL;
-						//							}
-						//						}
-					}
 
 				}
 			}
