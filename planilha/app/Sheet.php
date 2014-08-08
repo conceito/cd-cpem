@@ -48,20 +48,6 @@ class Sheet
 			 * authors
 			 */
 
-//			else if ($this->isFirstName($coord))
-//			{
-//				$newAuthor['first'] = (mb_strlen($value) < 2) ? null : $value;
-//			}
-//			else if ($this->isMiddleName($coord))
-//			{
-//				$newAuthor['middle'] = (mb_strlen($value) < 2) ? null : $value;
-//			}
-//			else if ($this->isLastName($coord))
-//			{
-//				$newAuthor['last'] = (mb_strlen($value) < 2) ? null : $value;
-//				$newRow['authors'][] = $newAuthor;
-//			}
-
 		}
 
 		$this->rows[$newRow['pdf_id']] = $newRow;
@@ -135,13 +121,6 @@ class Sheet
 
 						$this->addRow($cellIterator);
 
-//						foreach ($cellIterator as $cell)
-//						{
-//							if (!is_null($cell))
-//							{
-//								//							echo '        Cell - ', $cell->getCoordinate(), ' - ', $cell->getCalculatedValue(), PHP_EOL;
-//							}
-//						}
 					}
 
 
